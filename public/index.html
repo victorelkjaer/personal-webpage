@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Victor Elkjær Birk's Portfolio">
+  <meta name="keywords" content="victor, elkjaer, birk, victor elkjaer, victor elkjaer birk, victor birk, ai, artificial intelligence, machine learning, deep learning, dl, natural language processing, nlp, consultant, research, physics, mathematics, problem-solving, dtu, technical university of denmark, ibm, public sector, digital strategy, cloud, design thinking">
+  <meta name="author" content="Victor Elkjaer Birk">
+  <title>Bonjour 👋</title>
+  <link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+  <link rel="icon" type="image/png" href="images/pug-logo-png-transparent.png"/>
+</head>
+<body>
+
+  <header>
+    <h1>Greetings, my name is</h1>
+    <p class="author">
+      Victor Elkjaer Birk<br />
+    </p>
+    <figure>
+      <img src="images/victor.png"
+        loading="lazy" alt="Mountain landscape" width="600" height="400" />
+    </figure>
+  </header>
+  <h5>Welcome to my humble abode and thank you for coming around 🤩</h5>
+  <p>
+    First of all, I truly cherish the time you allow me to impact your thoughts while being here.
+    Within this domain, the reader should be able to get a solid understanding about the constituent elements of my being.
+  </p>
+  <p>
+    <b>TL;DR</b>, I am a savior-faire candid technologist who possesses an arsenal of unfathomably cheesy dad-jokes, e.g., <label for="sn-1"
+    class="sidenote-toggle sidenote-number">"what do you call a fat psychic?"🤓</label><input type="checkbox" id="sn-1" class="sidenote-toggle"/><span
+    class="sidenote right">A four-chin teller 🤪</span>
+  </p>
+  <p>
+    <h5>In everything I do, I pledge to</h5>
+    <ul>
+      <li>
+        be respectful, humble and candor,
+      </li>
+      <li>
+        work with integrity,
+      </li>
+      <li>
+        take time to think, to come up with new and innovative solutions to the problems I am facing,
+      </li>
+      <li>
+        restlessly reinvent myself to strengthen my strengths and improve upon my weaknesses.
+      </li>
+    </ul>
+  </p>
+  <p>
+      Occasionally, I try to articulate miscellaneous technological subjects eloquently ranging from natural language processing (NLP) to API management. My thoughts on such topics can be found <a href="https://www.blog.victorelkjaer.com">here</a>.
+  </p>
+  <nav role="navigation" class="toc">
+    <h2>Contents of this page</h2>
+    <ol>
+      <li>
+        <a href="#biography">Biography</a>
+        <ol>
+          <li>
+            <a href="#who-am-i">
+              Who am I? 💁‍♂️
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#finding-my-why">
+              The path to my why 🧐
+            </a>
+          </li> -->
+          <li>
+            <a href="#my-physical-and-spiritual-mentors">
+              My physical and spiritual mentors 🚀
+            </a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="#featured-projects">
+          Featured projects (present and past)
+        </a>
+      </li>
+      <!-- <li>
+        <a href="#making-a-career-at-ibm">Making a career at 👁🐝〽️</a>
+      </li> -->
+      <li>
+        <a href="#the-doyen-of-doggos">A picture of a dog</a>
+      </li>
+      <li><a href="#sidenotes">Sidenotes</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="biography">Biography</h2>
+
+  <h3 id="who-am-i">Who am I? 💁‍♂️</h3>
+  <p>I am a consultant within IBM Services (more specifically
+    <a href="https://www.ibm.com/services/ibmix/">IBM iX</a>) working at the
+    intersection between people and technology.
+    I hold a BSc degree in Physics and Nanotechnology
+    and a MSc degree in Mathematical Modelling and Computation. Both from the
+    <a href="https://www.dtu.dk/english">Technical University of Denmark (DTU)</a>.
+  </p>
+  <!-- <h3 id="finding-my-why">The path to my why 🧐</h3>
+  I've just embarked on the journey of finding my why using the techniques
+  outlined in Simon Sinek's <i>"Start with why"</i>. -->
+  <h3 id="my-physical-and-spiritual-mentors">My physical and spiritual mentors 🚀</h3>
+
+  <h2 id="featured-projects">Featured projects (present and past)</h2>
+  <h4>Co-supervisor for Master's Thesis at DTU</h4>
+  <p>
+    <i>
+      October 2020 - March 2021
+    </i>
+  </p>
+  <p>
+    I am currently a co-supervisor of a Master's Thesis project revolving around
+    we can exploit structured knowledge using knowledge graphs to enhance
+    state-of-the-art deep-learning based language models.
+  </p>
+  <!-- <h2 id="making-a-career-at-ibm">Making a career at 👁🐝〽️</h2> -->
+  <h2 id="the-doyen-of-doggos">The doyen of doggos</h2>
+  <p>Voici une photo d'un chien. J'adore les chiens!</p>
+  <img id="doggo-img" style="width: 100%;">
+
+</body>
+</html>
+
+<script>
+  function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(JSON.parse(xmlHttp.responseText));
+        }
+        xmlHttp.open("GET", theUrl, true);
+        xmlHttp.send(null);
+  }
+
+  function setImgCallback(response) {
+    const imgURL = response.message;
+    document.getElementById("doggo-img").src = imgURL;
+  }
+
+  httpGetAsync("https://dog.ceo/api/breeds/image/random", setImgCallback);
+
+</script>
